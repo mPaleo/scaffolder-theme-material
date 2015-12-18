@@ -1,5 +1,5 @@
 {
-    "name": "mpaleo/scaffolder-theme-material",
+    "name": "codificar/scaffolder-theme-material",
     "description": "Laravel scaffolder material theme",
     "license": "MIT",
     "keywords": [
@@ -17,6 +17,10 @@
         {
             "name": "Michael Paleo",
             "email": "github@michaelpaleo.com"
+        },
+        {
+            "name": "Raphael Canguçu",
+            "email": "raphael.cangucu@codificar.com.br"
         }
     ],
     "require": {
