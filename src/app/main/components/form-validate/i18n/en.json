@@ -1,0 +1,16 @@
+{
+	"ERROR_MESSAGE": {
+		"REQUIRED": "Required field",
+		"MAIL_INVALID": "Invalid email",
+		"NUMBER_INVALID": "Invalid number",
+		"PHONE_INVALID": "Invalid phone",
+		"CNPJ_INVALID": "Invalid CNPJ",
+		"CEP_INVALID": "Invalid CEP",
+		"CONFIRM": "s do not match",
+		"MINLENGTH": "The field must contain at least",
+		"DIGITS": "digits",
+		"PASSWORD_INVALID": "Password must contain at least 6 characters",
+		"UNIQUE_VALUE": "Value already registered in the system"
+	},
+	"SEARCH_MESSAGE": "Search"
+} 

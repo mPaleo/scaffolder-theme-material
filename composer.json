@@ -1,34 +1,31 @@
 {
-    "name": "codificar/scaffolder-theme-material",
-    "description": "Laravel scaffolder material theme",
-    "license": "MIT",
-    "keywords": [
-        "laravel",
-        "model",
-        "migration",
-        "seed",
-        "crud",
-        "scaffold",
-        "generator",
-        "theme",
-        "material"
-    ],
-    "authors": [
-        {
-            "name": "Michael Paleo",
-            "email": "github@michaelpaleo.com"
-        },
-        {
-            "name": "Raphael Canguçu",
-            "email": "raphael.cangucu@codificar.com.br"
-        }
-    ],
-    "require": {
-        "php": ">=5.5.9"
-    },
-    "autoload": {
-        "psr-4": {
-            "ScaffolderTheme\\": "src/ScaffolderTheme/"
-        }
-    }
+	"name": "codificar/scaffolder-theme-material",
+	"description": "Laravel scaffolder",
+	"license": "MIT",
+	"keywords": [
+		"angular",
+		"material",
+		"scaffolder",
+		"crud",
+		"scaffold",
+		"generator",
+		"mvc"
+	],
+	"authors": [
+		{
+			"name": "Augusto Alves",
+			"email": "augusto.alves@codificar.com.br"
+		},
+		{
+			"name": "Maria Luisa",
+			"email": "maria.luisa@codificar.com.br"
+		},
+		{
+			"name": "Raphael Canguçu",
+			"email": "raphael.cangucu@codificar.com.br"
+		}
+	],
+	"require": {
+		"php": ">=5.5.9"
+	}
 }

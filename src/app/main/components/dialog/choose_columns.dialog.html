@@ -1,0 +1,32 @@
+<md-dialog aria-label="Ordenar Colunas" class="custom-dialog">
+	<form>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>{{dg.title}}</h2>
+				<span flex></span>
+				<md-button class="md-icon-button close-dialog-button" ng-click="closeDialog()">
+					<i class="icon icon-close-circle"></i>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<p>{{dg.explain}}</p>
+				<div layout="row" layout-wrap>
+					<div ng-repeat="column in dg.data track by $index" class="item" flex="25">
+						<md-checkbox ng-checked="column.visible" ng-click="toggleColumn(column, $index)">
+	                		{{ column.name }}
+	              		</md-checkbox>
+					</div>				
+					
+				</div>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<span flex></span>
+			<md-button class="md-raised md-accent md-align-right" ng-click="hideColumns()">
+			{{ 'common_words.confirm' | translate}}
+			</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

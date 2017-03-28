@@ -1,0 +1,124 @@
+{
+	"nav": {
+		"list": "Listar",
+		"register": "Registrar"
+	},
+	"common_words": { 
+		"cancel": "Cancelar",
+		"clean": "Limpar",
+		"confirm": "Confirmar",
+		"delete": "Exlcuir", 
+		"edit": "Editar",
+		"file_upload": "Selecionar arquivo",
+		"file_uploads": "Selecionar arquivos",
+		"image_upload": "Selecionar imagem",
+		"images_upload": "Selecionar imagens",
+		"filter": "Filtro",
+		"no": "Não",
+		"no_image": "Sem imagem",
+		"ok": "OK",
+		"remove": "Remover",
+		"save": "Salvar",
+		"show_details": "Ver detalhes",
+		"update": "Atualizar",
+		"yes": "Sim",
+		"image_upload_description": "Carregar imagem",
+  		"image_uploads_description": "Carregar imagens",
+  		"file_upload_description": "Carregar arquivo",
+  		"file_uploads_description": "Carregar arquivos",
+  		"remove_items": "Remover itens"
+	},
+	"advanced_options": {
+		"title": "Opções Avançadas",
+		"print": "Imprimir",
+		"excel": "Exportar para Excel",
+		"pdf": "Exportar para PDF",
+		"choose_columns": {
+			"title": "Escolher Colunas",
+			"explain": "Selecione as colunas para alterar sua visibilidade."
+		}
+	},
+	"list": {
+		"actions": "Ações",
+		"toggle_sidenav": "Toggle Sidenav",
+		"toasts": {
+			"remove_item": {
+				"success": "{{entity}} removido com sucesso.",
+				"error": "Não foi possível remover o(a) {{entity}}."
+			}
+		},
+		"dialogs": {
+			"remove_item": {
+				"title": "Remover {{entity}}?",
+				"content": "Você está prestes a remover esse(a) {{entity}}. Tem certeza?"
+			},
+			"show_item": {
+				"title": "Informação do item"
+			}
+		},
+		"content": {
+			"title": "Procurar {{entity}}",
+			"subtitle": "Filtrar {{entity}}",
+			"about_filters": "Preencha os campos abaixo para filtrar os(as) {{entity}}."
+		},
+		"filter": {
+			"simple": "Pesquisa simples",
+			"advanced": "Pesquisa Avançada",
+			"advanced_options": {
+				"hide": "Esconder opções avançadas",
+				"show": "Ver opções avançadas"
+			}
+		},
+		"new_item": "Adicionar Novo",
+		"no_items": "Nenhum item encontrado.",
+		"message_new_item": "Cadastre novos items clicando",
+		"link_new_item": "aqui"
+	},
+	"register": {
+		"dialogs": {
+			"add_item": {
+				"success": {
+					"title": "Novo(a) {{entity}} salvo(a)",
+					"content": "{{entity}} salvo(a) com sucesso."					
+				},
+				"error": {
+					"title": "Erro!",
+					"content": "Um erro ocorreu ao salvar o(a) {{entity}}.",					
+					"content_with_log": "Um erro ocorreu ao salvar o(a) {{entity}}. Erro:."					
+				}
+			},
+			"edit_item": {
+				"success": {
+					"title": "{{entity}} editado(a)",
+					"content": "{{entity}} editado(a) com sucesso."					
+				},
+				"error": {
+					"title": "Erro!",
+					"content": "Um erro ocorreu durante a edição do(a) {{entity}}."					
+				}
+			},
+			"remove_item": {
+				"title": "Remover o(a) {{entity}}?",
+				"content": "Você está prestes a remover esse(a) {{entity}}. Tem certeza?"
+			}
+		},
+		"content": {
+			"title": "Registrar {{entity}}",
+			"introduction": "Preencha os campos abaixo para criar um(a) novo(a) {{entity}}."
+		},
+		"fields": {
+			"upload_image": {
+				"simple": "Selecione uma imagem para fazer upload. Os formatos de imagem aceitos são .JPG e .PNG e o tamanho máximo deve ser 1MB.",
+				"multiple": "Selcione várias imagens para fazer upload."
+			} 
+		}
+	},
+	"dashboard_title":"Página inicial",
+	"admin": "Administrador",
+	"login": {
+		"error":{
+			"title": "Erro!",
+			"content": "Email ou senha inválidos"
+		}
+	}
+}

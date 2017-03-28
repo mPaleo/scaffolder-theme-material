@@ -1,0 +1,19 @@
+<md-chips ng-model="selectedItems" md-autocomplete-snap
+	md-on-add="changeItem()"
+	md-on-remove="changeItem()"
+	md-transform-chip="transformChip($chip)"
+	md-require-match="autocompleteDemoRequireMatch">
+	<md-autocomplete
+		md-selected-item="selectedItem"
+		md-search-text="searchText"
+		md-items="item in querySearch(searchText)"
+		md-item-text="item.text"
+		placeholder="{{ 'SEARCH_MESSAGE' | translate}}">
+		<span md-highlight-text="searchText">{{item.text}}</span>
+	</md-autocomplete>
+	<md-chip-template>
+		<span>
+			<strong>{{$chip.text}}</strong>
+		</span>
+	</md-chip-template>
+</md-chips>

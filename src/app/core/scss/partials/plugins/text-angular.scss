@@ -1,0 +1,19 @@
+.ta-scroll-window {
+
+    &.form-control {
+        border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+}
+
+.ta-group {
+    margin-bottom: 16px;
+
+    .md-button {
+        width: 40px;
+        min-width: 40px;
+        line-height: 40px;
+        height: 40px;
+        min-height: 40px;
+        padding: 8px;
+    }
+}

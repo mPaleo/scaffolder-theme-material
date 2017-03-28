@@ -1,0 +1,62 @@
+/*----------------------------------------------------------------*/
+/*  ms-search-bar
+/*----------------------------------------------------------------*/
+
+.ms-search-bar {
+    height: $toolbarHeight;
+    font-size: 13px;
+
+    #ms-search-bar-expander,
+    #ms-search-bar-collapser {
+        cursor: pointer;
+        padding: 0 20px;
+        width: 64px !important;
+        height: $toolbarHeight !important;
+        line-height: $toolbarHeight !important;
+    }
+
+    #ms-search-bar-expander {
+
+    }
+
+    #ms-search-bar-collapser {
+        display: none;
+    }
+
+    #ms-search-bar-input {
+        display: none;
+        min-height: $toolbarHeight;
+        background-color: transparent;
+    }
+
+    &.expanded {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #FFFFFF;
+        z-index: 10;
+
+        #ms-search-bar-input {
+            display: block;
+        }
+
+        #ms-search-bar-expander {
+            display: none;
+        }
+
+        #ms-search-bar-collapser {
+            display: block;
+        }
+    }
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: $layout-breakpoint-sm) {
+
+    .ms-search-bar-label {
+        padding: 0 8px 0 12px;
+    }
+}

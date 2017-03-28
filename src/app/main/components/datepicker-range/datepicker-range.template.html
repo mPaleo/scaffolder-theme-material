@@ -1,0 +1,13 @@
+<div class="datepicker-range">
+	<md-input-container class="md-block">
+		<label for="" class="md-label">{{datapickerRangeName}}</label>
+		<md-select ng-model="datepickerRange.select" ng-change="setRangePeriod()">
+			<md-option ng-value="period.value" ng-repeat="period in periods">{{period.name}}</md-option>
+		</md-select>
+	</md-input-container>
+	<div class="row" layout="column" layout-gt-sm="row" ng-show="datepickerRange.select == 'other'">
+		<md-datepicker  class="md-block" ng-change="createRangePeriod()" ng-model="calendar.start" md-max-date="calendar.end" flex="40"></md-datepicker>
+		<span class="md-label md-label-middle"  flex="20">{{ 'FORM.UNTIL' | translate }}</span>
+		<md-datepicker  class="md-block" ng-change="createRangePeriod()" md-min-date="calendar.start" ng-model="calendar.end"  flex="40"></md-datepicker>	
+	</div>
+</div>

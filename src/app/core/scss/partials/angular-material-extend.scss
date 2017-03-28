@@ -1,0 +1,232 @@
+/*----------------------------------------------------------------*/
+/*  Angular Material Extend
+/*  Adds and/or modifies Angular Material styles
+/*----------------------------------------------------------------*/
+
+/* --- FIXES --- */
+
+// IE layout-fill fix
+[layout] {
+
+    > * {
+        min-height: auto;
+        min-height: initial;
+    }
+}
+
+// IE card img auto height Fix
+md-card > img,
+md-card > :not(md-card-content) img {
+    height: inherit;
+    height: initial;
+}
+
+// Date picker box-sizing Fix
+.md-datepicker-calendar-pane {
+
+    * {
+        box-sizing: initial;
+    }
+}
+
+/* --- MODIFICATIONS --- */
+
+// Autocomplete
+md-autocomplete-wrap {
+
+    > input[type="search"] {
+        background: #FFFFFF;
+        padding: 0 15px !important;
+    }
+}
+
+// Backdrop
+md-backdrop {
+
+    &.md-opaque {
+        background-color: rgba(33, 33, 33, 0.48) !important;
+    }
+}
+
+// Button
+.md-button {
+
+    // Fab
+    &.md-fab {
+        line-height: 1;
+    }
+}
+
+// Checkbox
+md-checkbox {
+
+    &.no-label {
+        margin: 0;
+    }
+}
+
+// Datepicker
+md-datepicker {
+
+    .md-datepicker-input-container {
+        margin-left: 2px;
+    }
+}
+
+// Dialog
+md-dialog {
+
+    md-dialog-content {
+        padding: 32px 24px 24px 24px;
+    }
+
+    md-dialog-actions {
+        min-height: 64px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        .md-button {
+            margin: 0 8px;
+        }
+    }
+}
+
+// Input
+md-input-container {
+
+    // fix ng-messages container underneath the
+    // input fields when we are using extra
+    // ng-show to hide error messages on untouched
+    // form elements
+    [ng-messages] {
+
+        &.ng-hide {
+            display: block !important;
+            visibility: hidden;
+        }
+    }
+
+    &.no-errors-spacer {
+
+        .md-errors-spacer {
+            display: none;
+        }
+    }
+}
+
+// Lists
+md-list-item {
+
+    .md-list-item-text {
+
+        p {
+            font-size: 13px !important;
+        }
+    }
+}
+
+// Menu
+.md-menu {
+    padding: 0;
+}
+
+// IE fix
+md-menu-content {
+
+    md-menu-item {
+
+        .md-button {
+            text-align: left;
+        }
+    }
+}
+
+// Progress
+md-progress-linear {
+
+    .md-container {
+        top: 0 !important;
+    }
+}
+
+// Select
+md-select {
+
+    &.simplified {
+        margin: 0 8px;
+
+        .md-select-value {
+            border: none !important;
+            box-sizing: border-box;
+            padding: 0;
+
+            & *:first-child {
+                transform: none;
+            }
+
+            .md-select-icon {
+                transform: none;
+
+                &:after {
+                    top: 1px;
+                }
+            }
+        }
+    }
+}
+
+// Sidenav
+md-sidenav {
+    -webkit-overflow-scrolling: touch;
+}
+
+// Toolbar
+md-toolbar {
+
+    // Colored toolbar element compatibility
+    &.colored-toolbar {
+        color: rgba(255, 255, 255, 0.87);
+
+        md-menu-bar {
+
+            md-menu {
+
+                &.md-open {
+
+                    > button {
+                        background: rgba(0, 0, 0, 0.12);
+                    }
+                }
+
+                .md-open-menu-container {
+                    background: #FFFFFF;
+
+                    md-menu-item {
+
+                        button {
+                            color: rgba(0, 0, 0, 0.87) !important;
+                        }
+
+                        md-icon {
+                            color: rgba(0, 0, 0, 0.54);
+                        }
+                    }
+                }
+            }
+        }
+
+        md-menu {
+
+            &.md-open {
+
+                > button {
+                    background: rgba(0, 0, 0, 0.12);
+                }
+            }
+        }
+
+        input {
+            color: rgba(255, 255, 255, 0.87) !important;
+        }
+    }
+}

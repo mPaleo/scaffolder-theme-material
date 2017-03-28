@@ -1,0 +1,22 @@
+<md-dialog aria-label="Ordenar Colunas" class="custom-dialog">
+	<form>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>{{dg.title}}</h2>
+				<span flex></span>
+				<md-button class="md-icon-button close-dialog-button" ng-click="closeDialog()">
+					<i class="icon icon-close-circle"></i>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-dialog-content> 
+			<div class="md-dialog-content">
+				<md-list>
+					<md-list-item ng-repeat="item in dg.data">
+						<strong>{{item.name}}</strong>: {{item.value}}
+					</md-list-item>
+				</md-list>
+			</div>
+		</md-dialog-content>
+	</form>
+</md-dialog>

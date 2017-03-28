@@ -1,0 +1,156 @@
+<div id="forms" class="page-layout simple fullwidth doc-page" layout="column">
+
+	<div class="header md-accent-bg" layout="row" layout-align="space-between">
+		<div layout="column" layout-align="space-between">
+			<div class="breadcrumb" layout="row" layout-align="start center">
+				<md-icon md-font-icon="icon-home" class="s16"></md-icon>
+				<md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+				<span class="parent" translate>sample.plural</span>
+				<md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+				<span class="parent" translate>nav.register</span>
+			</div>
+
+			<div class="title" translate translate-values="{value:  {{ 'sample.plural' | translate }}}">register.content.title</div>
+		</div>
+	</div>
+
+	<div class="content" layout="column">
+
+			<div class="form-wrapper md-whiteframe-1dp" flex>
+				<md-tabs md-dynamic-height>
+					<md-tab label="Cadastro de empresas">
+						<md-tab-body>
+
+							<form name="basicForm" novalidate>
+
+								<div class="form-title" translate>register.content.introduction</div>
+
+								<div class="about-entity">
+									<md-input-container class="md-block">
+									   <div class="label"> {{ 'sample.columns.id' | translate }} </div> <span class="label-value">{{ vm.company.id }}</span>
+									</md-input-container>
+
+									<md-input-container class="md-block">
+									   <div class="label label-date"> {{ 'sample.columns.created_at' | translate }} </div> <span class="label-value">{{ vm.company.created_at }}</span>
+									</md-input-container>
+
+									<md-input-container class="md-block">
+									   <div class="label label-date"> {{ 'sample.columns.updated_at' | translate }} </div> <span class="label-value">{{ vm.company.updated_at }}</span>
+									</md-input-container>
+								</div> 
+
+								<md-input-container class="md-block">
+									<label> {{ 'sample.columns.fantasy_name' | translate }} </label>
+									<input cd-required type="text" name="fantasy_name" ng-model="vm.company.fantasy_name" required> 
+								</md-input-container>
+								
+								<md-input-container class="md-block">
+									<label> {{ 'sample.columns.social_reason' | translate }} </label>
+									<input cd-required type="text" name="social_reason" ng-model="vm.company.social_reason" required> 
+								</md-input-container>
+								
+								<md-input-container class="md-block">
+								   	<label> {{ 'sample.columns.cnes' | translate }} </label>
+									<input cd-number maxlength="7" name="cnpj" ng-model="vm.company.cnes" placeholder="0000000" required>                      
+								</md-input-container>
+
+								<md-input-container class="md-block">
+								   	<label> {{ 'sample.columns.cnpj' | translate }} </label>
+									<input cd-cnpj cd-unique="http://localhost:8000/api/company/unique/?field=cnpj&value=" name="cnpj" ng-model="vm.company.cnpj" placeholder="00.000.000/0000-00" required>                      
+								</md-input-container>
+
+								<md-input-container class="md-block">
+									<label> {{ 'sample.columns.phone' | translate }} </label>
+									<input cd-phone type="text" name="phone" ng-model="vm.company.phone" required> 
+								</md-input-container>
+
+								<fieldset class="standard fieldset-entity">
+									<legend> {{ 'register.content.address_info' | translate }} </legend>
+
+									<div class="about-entity">
+										<md-input-container class="md-block">
+										   <div class="label"> {{ 'sample.columns.address.id' | translate }}  </div> <span class="label-value">{{ vm.company.address.id }}</span>
+										</md-input-container>
+
+										<md-input-container class="md-block">
+										   <div class="label"> {{ 'sample.columns.address.created_at' | translate }} </div> <span class="label-value">{{ vm.company.address.created_at }}</span>
+										</md-input-container>
+
+										<md-input-container class="md-block">
+										   <div class="label"> {{ 'sample.columns.address.updated_at' | translate }} </div> <span class="label-value">{{ vm.company.address.updated_at }}</span>
+										</md-input-container>
+									</div>
+
+									<md-input-container class="md-block">
+										<label> {{ 'sample.columns.address.zip_code' | translate }} </label>
+										<input cd-cep cd-completeaddress searchurl="https://viacep.com.br/ws/CEP/json/" fields="[street, city, state, district, complement]" name="cep" ng-model="vm.company.address.zip_code" placeholder="00.000-000" required>
+									</md-input-container>  
+
+									
+									<md-input-container class="md-block input">
+										<label> {{ 'sample.columns.address.city' | translate }} </label>
+										<md-autocomplete cd-autocomplete 
+											ng-disabled="dir.isDisabled"
+											md-no-cache="dir.noCache"
+											md-selected-item="dir.selectedItem"
+											md-search-text-change="dir.searchTextChange(dir.searchText)"
+											md-search-text="dir.searchText"
+											md-selected-item-change="dir.selectedItemChange(item); vm.company.address.city_id = item.id"
+											md-items="item in dir.querySearch(dir.searchText)"
+											md-item-text="item.text"
+											md-min-length="0"
+											url="app/data/company/MG.json"
+											ng-init="vm.company.address.city_id = item.id"> 
+
+										<md-item-template>
+											<span md-highlight-text="dir.searchText" md-highlight-flags="^i"> {{ item.name }}, {{ item.state_name }}</span>
+										</md-item-template>
+										
+									  </md-autocomplete>
+									</md-input-container>
+
+									<md-input-container class="md-block">
+										<label> {{ 'sample.columns.address.street' | translate }} </label>
+									   	<input cd-required type="text" name="street" ng-model="vm.company.address.street" required> 
+									</md-input-container>
+
+									<md-input-container class="md-block">
+										<label> {{ 'sample.columns.address.number' | translate }} </label>
+										<input cd-number maxlength='8' minlength='1' type="text" name="number" ng-model="vm.company.address.number" required> 
+									</md-input-container>
+
+									<md-input-container class="md-block">
+										<label> {{ 'sample.columns.address.complement' | translate }} </label>
+										<input cd-required type="text" name="name" ng-model="vm.company.address.complement" required> 
+									</md-input-container>
+
+									<md-input-container class="md-block">
+										<label> {{ 'sample.columns.address.district' | translate }} </label>
+									   <input cd-required type="text" name="district" ng-model="vm.company.address.district" required> 
+									</md-input-container>
+								</fieldset>
+																							   
+								<div class="buttons-form">
+									<md-button type="submit" class="md-raised md-accent button-cancel button-form" ng-click="vm.cancelAction();">
+										<i class="icon icon-cancel icon-button-form"></i>
+										{{ 'common_words.cancel' | translate }}
+									</md-button>
+									<md-button type="submit" class="md-raised md-accent button-delete button-form" ng-click="vm.confirmDeleteAction($event);"  ng-disabled="!vm.company.id">
+										<i class="icon icon-delete icon-button-form"></i>
+										{{ 'common_words.delete' | translate }}
+									</md-button>
+									<md-button type="submit" class="md-raised md-accent button-save button-form" aria-label="Submit" ng-click="vm.sendForm();" ng-disabled="basicForm.$invalid">
+										<i class="icon icon-content-save icon-button-form"></i>
+										{{ 'common_words.save' | translate }}
+									</md-button>
+								</div>
+							</form>
+
+						</md-tab-body>
+					</md-tab>
+				</md-tabs>
+
+			</div>
+		</div>
+	</div>
+</div>

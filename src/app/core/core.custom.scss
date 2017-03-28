@@ -1,0 +1,1266 @@
+/*
+ *		- Scaffolder code generate - 
+ *			por Codificar Sistemas Tecnologicos
+ *
+ *		CSS: core customization 
+ *		Fuse template customization to @marialuisa with new spaces, margins, paddings and colors
+ *		in pages of List and register items
+ *
+ */
+
+/* MODULES */
+
+/*
+ *		Header - 
+ *
+ */
+[md-theme="scaffolder"] * {
+	/*box-shadow: none !important;*/
+} 
+[md-theme="scaffolder"] .md-accent-bg.header, .top-bg.md-accent-bg { 
+	background-color: #fdfdfd !important;
+	color: rgba(255,255,255,1);
+}
+
+/* Header */
+.header, .doc-page > .header, #forms .header.md-accent-bg { 
+	height: 40px !important;
+	max-height: 40px !important;
+	min-height: 40px !important;
+	background: #f9f9f9 !important;
+	border-bottom: solid 1px #eee;
+}
+.header .title, .header .md-display-1{ 
+	display: none !important; 
+}
+.area-title{
+	margin-bottom: 20px !important;
+}
+.area-title .title{
+	font-size: 21px !important;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+	width: initial !important;
+	color: rgba(0,0,0,0.5) !important;
+	max-width: 200px !important;
+	text-transform: uppercase !important;
+	margin-top: -7px !important;
+	font-size: 1em !important;
+	font-weight: bold !important;
+}
+.page-layout > .header .breadcrumb {
+	margin-bottom: -7px !important;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.54);
+}
+.header button.md-icon-button.sidenav-toggle{
+	margin-top: -15px !important;
+}
+.header md-icon.icon.ng-isolate-scope.md-font.icon-menu.md-scaffolder-theme{
+	color: rgba(0,0,0,0.5) !important;
+}
+
+/* Form items style */
+
+/* background */
+.page-layout.simple.right-sidenav > .center .content {
+	padding: 24px;
+	/*background: #f5f5f5 !important;*/
+}
+md-content#content, md-content#content .content{
+	background-color: #f6f6f6 !important
+}
+
+/* form box */
+.filter-box{
+	margin-bottom: 30px !important;
+}
+.filter-box .actions-box{
+	text-align: right;
+}
+.filter-box .actions-box .icon.icon-magnify{
+	color: rgba(255,255,255,0.54);
+	position: relative;
+	top: 5px;
+}
+
+/* item input */
+.form-item-input{
+	display: inline-block !important;
+	margin-bottom: 0 !important;
+	margin-top: 0px !important;
+	height: 70px;
+	vertical-align: middle;
+
+	/*overflow: hidden;*/
+	/*word-wrap: normal;*/
+}
+.form-item-input input{
+	font-size: 13px !important;
+}
+.form-item-input input ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: pink;
+}
+.form-item-input label.ng-scope, .md-select-value span{
+	font-size: 14px;
+}
+.label-only{
+	font-weight: lighter !important;
+}
+
+/* scafollder grid layout */
+.item-layout-collumns-1{
+	width: 100% !important;
+	display: block !important;
+}
+.item-layout-collumns-2 {
+	width: 49.5% !important;
+}
+.item-layout-collumns-3 {
+	width: 33% !important;
+}
+.item-layout-collumns-4 {
+	width: 24% !important;
+}
+.item-layout-collumns-5 {
+	width: 19.5%; 
+}
+.fields.layout-collumns-1 .form-item-input{
+	width: 100%;
+	display: block !important;
+}
+.fields.layout-collumns-2 .form-item-input{
+	width: 49.5%;
+}
+.fields.layout-collumns-3 .form-item-input{
+	width: 33%;
+}
+.fields.layout-collumns-4 .form-item-input{
+	width: 24.5%; 
+}
+.fields.layout-collumns-5 .form-item-input{
+	width: 19.5%; 
+}
+
+/*  alinhamento do select do datepicker com os outros campos	*/
+datepicker-range.form-item-input md-select md-select-value{
+	position: relative;
+	top: -2px; 
+}
+/*  alinhamento do select dos campos de select e enum		*/
+cd-enum md-select{
+	top: -20px;
+	position: relative;
+	height: 30px;
+}
+/* alinhamento select */ 
+datepicker-range.form-item-input{
+	top: -16px;
+	position: relative;
+}
+
+/* alinhamento dos labels com os outros*/
+.form-item-input.form-label{
+	margin-bottom: 18px !important;
+	font-size: .85em;
+}
+.buttons-form button .icon{
+	color: rgba(255,255,255,0.54) !important;
+	position: relative !important;
+	top: 5px !important;
+}
+.button-cancel{
+	background: #D73C2C !important
+}
+
+/* area dos botoes form */
+.buttons-form{
+	margin-top: 50px !important;
+	text-align: center !important;
+}
+/* campos de autocomplete e chips*/
+.multiple-fields *{
+	font-size: 14px !important
+}
+
+/*
+ *	ESTILOS DO SCAFFOLDER FORM - Tela de lista
+ *
+ *	criado por maria.luisa@codificar.com.br
+ *
+ */
+ #sample-list, #sample-list .content{
+	/*background-color: #e2eae2 !important;*/
+ }
+.ui-grid-canvas{
+	z-index: -1 !important;
+}
+.ui-grid{
+	border: none;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.ui-grid-contents-wrapper *{
+	border: none;
+	border-bottom: none;
+}
+/* Header do datatable */
+.ui-grid-header{
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.04), 0px 2px 1px -1px rgba(0, 0, 0, 0.1) !important;
+	height: 50px;
+	background: #fff;
+	padding: 6px 0;
+}
+.ui-grid-header-cell-wrapper{
+	background: #fff;
+	border: none !important;
+}
+/* texto */
+.ui-grid-cell-contents.ui-grid-header-cell-primary-focus .ui-grid-header-cell-label.ng-binding{
+	font-weight: normal;
+	margin-left: 5%;
+	font-size: 1.1em;
+}
+/* remover a borda das celulas do header */
+.ui-grid-header-cell.ui-grid-clearfix{
+	border: none;
+}
+/* icon */
+.ui-grid-column-menu-button .ui-grid-icon-angle-down {
+	vertical-align: sub;
+	position: relative;
+	top: 8px;
+	right: 2%;
+	font-size: 15px;
+	color: #999;
+}
+
+/* linha */
+.ui-grid-row {
+	height: 50px !important;
+	margin: 0 !important;
+	overflow: hidden;
+	border-bottom: solid 1px #e0e0e0;
+}
+
+/* celula */
+
+.ui-grid-cell {
+	padding: 10px;
+}
+
+/* celulas cinza */
+
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+	background-color: #f5f5f5;
+}
+
+/* Acoes */
+
+.grid1481894777849 .ui-grid-coluiGrid-000A {
+	min-width: 120px;
+}
+.grid1481894777849 .ui-grid-row:last-child .ui-grid-cell {
+	border-bottom-width: 0px;
+}
+
+/* icons actions */
+
+.md-fab.md-dg-icon.md-mini.md-button.md-ink-ripple.md-scaffolder-theme, .ui-grid-cell-contents.ui-grid-cell-actions .md-button{
+	line-height: 20px !important;
+	width: 25px !important;
+	height: 25px !important;
+	min-height: 25px !important;
+	margin: 5px !important;
+	cursor: pointer !important;
+}
+.md-fab.md-dg-icon.md-mini.md-button.md-ink-ripple.md-scaffolder-theme i, .ui-grid-cell-contents.ui-grid-cell-actions .md-button i{
+	font-size: 15px !important;
+	position: relative !important;
+	top: 2px !important;
+	left: 0px !important;
+	color: #fff !important;
+}
+/*ui-grid-cell-contents ui-grid-cell-actions ng-binding ng-scope*/
+.ui-grid-cell-contents.ui-grid-cell-actions.ng-binding.ng-scope{
+	padding: 0;
+	margin-top: -7px;
+}
+/* cores dos icones */
+.ui-grid-cell-actions .md-blue-500-bg {
+	background-color: #9c9c9c !important; 
+}
+.ui-grid-cell-actions .md-red-500-bg {
+	background-color: #fa5d54 !important; 
+}
+
+/* Remover o estilo da ordenacao q ja vem */
+.ui-grid-icon-up-dir, .ui-grid-icon-down-dir, .ui-grid-sort-priority-number.ng-binding{
+	display: none;
+	position: absolute;
+}
+/* footer */
+.ui-grid-pager-panel{ 
+	background: #fff;
+	padding: 10px 0;
+	border-top: solid 1px #ddd;
+}
+
+/* ui-grid-menu */
+
+.ui-grid-menu .ui-grid-menu-inner ul li button:hover, .ui-grid-menu .ui-grid-menu-inner ul li button:focus {
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	background-color: #f9f9f9 !important;
+	padding: 	5px 0;
+}
+.ui-grid-menu .ui-grid-menu-mid ul li{
+	box-shadow: none;
+	background-color: #fff !important
+}
+.ui-grid-menu .ui-grid-menu-mid ul li i {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+}
+.ui-grid-menu .ui-grid-menu-mid .ui-grid-icon-cancel{
+	display: none;	
+	outline: none;	
+}
+.ui-grid-menu .ui-grid-menu-inner ul li button:hover, .ui-grid-menu .ui-grid-menu-inner ul li button:focus, .ui-grid-menu .ui-grid-menu-inner ul li button {
+	padding: 10px !important;
+}
+.ui-grid-menu .ui-grid-menu-inner ul li button.ui-grid-menu-item-active {
+	box-shadow: none !important;
+	background-color: #ddd !important;
+}
+
+/*
+ *	ESTILOS DO SCAFFOLDER FORM - Tela de cadastro 
+ *
+ *	criado por maria.luisa@codificar.com.br
+ *
+ */
+md-tabs-canvas{
+	display: none !important
+}
+
+.page-register-scaff .form-wrapper {
+	background: #FFFFFF;
+	padding: 40px !important;
+}
+
+/* titulo scaffolder forms */
+
+.form-title-scaffolder{
+	text-transform: uppercase;
+	font-size: 16px !important;
+	padding: 20px 0 !important;
+	/*font-weight: bold;*/
+	color: #555;
+}
+
+/* button form */
+.button-delete{
+}
+.button-form{
+	height: 40px !important;
+}
+.button-form .icon{
+	position: relative !important;
+	top: 4px !important;
+	color: rgba(255,255,255,0.3) !important;
+}
+
+.flow .area-photo-upload{
+	border: none !important;
+}
+
+/*
+ *  COMPONENTES 
+ *	criado por maria.luisa@codificar.com.br
+ *
+ */
+
+/* Date picker */
+md-datepicker input, .md-datepicker-input{
+	background: transparent !important;
+}
+.label-custtom-fields {
+	color: rgba(0, 0, 0, 0.54);
+	margin-bottom: 30px;
+	font-size: 14px;
+	display: inline-table;
+}
+
+/* Text area edit */
+
+.input-edit-text{
+}
+.input-edit-text .mce-panel {
+	background-color: #f0f0f0;
+	border: 1px solid #ddd !important;
+	margin-bottom: 30px;
+}
+.input-edit-text .mce-panel *{
+	color: #777 !important;
+}
+
+/* Upload de imagens */
+
+.label-options-multiple-upload{
+	display: block;
+
+}
+.label-options-multiple-upload button, .label-options-multiple-upload .button-form{
+	padding: 5px !important;
+	padding-bottom: 0;
+	height: 40px;
+	background: #90a4ae;
+	width: 132px;
+}
+.label-options-multiple-upload	.item-label-options{
+	display: inline-block;
+}
+.fieldset-upload{
+	border: 1px solid #eee !important;
+	/*border: none !important;*/
+	background: #fafafa;
+	margin-bottom: 20px;
+}
+.label-options-multiple-upload .button-form.button-file-upload{
+	padding-top: 0px !important;
+}
+.button-file-upload input{
+	margin-left: 30px !important; 
+}
+
+.flow .area-photo-upload .no-image {
+	background: #fafafa !important;
+}
+#navigation-toggle{
+	top: 0 !important;
+}
+
+/* upload simples */
+
+.flex-gt-sm-50 {
+	max-width: 100% !important;  
+}
+.simple-upload .area-image-single{
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12) !important;
+}
+.simple-upload .area-photo-upload .no-image{
+	margin-top: 0 !important;
+	padding: 0 !important; 
+	width: 150px !important;
+	height: 150px !important; 
+}
+.simple-upload .area-options-upload .label-upload{
+	display: block !important;
+	width: 100% !important;
+	position: relative;
+	top: 30px; 
+}
+.simple-upload .area-photo-upload img{
+	/*width: 150px !important;*/
+}
+.simple-upload .area-photo-upload {
+	width: 150px !important;
+	height: 150px !important;
+	min-height: 150px !important;
+	/*border-radius: 3px;*/
+	border-radius: 50% !important;
+	overflow: hidden !important;
+	display: inline-block !important;
+	margin: 10px !important;
+	padding: 0 !important;
+	margin-right: 20px !important;
+	vertical-align: top !important;
+}
+.simple-upload .area-options-upload .buttons{
+	position: relative !important;
+	top: 20px !important;
+}
+.simple-upload .area-options-upload .buttons .button-form{
+	padding-top: 10px !important;
+}
+.simple-upload .area-options-upload{
+	display: inline-block !important;
+	width: 55% !important;
+}
+.simple-upload .button-remove-image{
+	padding: 5px !important !important;
+	padding-bottom: 0 !important;
+	height: 40px !important;
+	background-color: #90a4ae !important;
+	position: relative !important;
+	top: -2px !important;
+}
+.simple-upload .button-file-upload .button-form{
+	position: relative !important;
+	top: 8px !important;
+}
+.simple-upload .button-file-upload{ 
+	background-color: #4C5A69 !important;
+	width: 250px !important;
+	position: relative !important;
+	top: 17px !important;
+	width: 190px !important;
+	max-width: 200px !important;
+}
+.simple-upload{
+
+}
+.simple-upload .area-image-single.area-photo-upload, .flow .area-image-single.area-photo-upload{
+	display: inline-block !important; 
+}
+.flow .button-file-upload .upload-file-original {
+	padding-left: 400px;
+	margin-left: -190px;
+	height: 44px;
+	cursor: pointer;
+	display: block !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: -30px !important;
+}
+.simple-upload .area-options-upload .buttons .button-form{
+	padding-top: 5px !important;
+}
+
+/* Auto complete */
+.input-auto-complete{
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+/* Face autocomplete */
+.item-selected-autocomplete{
+	background: #f00;
+	padding: 8px;
+	border-radius: 10px;
+	background: #eee !important;
+}
+.items{
+	margin-bottom: 20px;
+}
+.items span{
+	margin-left: 10px;
+	border-radius: 20px;
+}
+.items i{
+	margin: 0;
+	position: relative;
+	top: 5px;
+	left: 12px;
+	color: #aaa
+}
+ 
+/* Multiple autocomplete */
+
+multiple-autocomplete input{
+	background: #FFFFFF;
+	padding: 0 15px !important;
+	font-size: 14px;
+	box-sizing: border-box;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	background: transparent;
+	width: 100%;
+	padding: 0 15px;
+	line-height: 40px;
+	height: 40px;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+multiple-autocomplete .form-item-container{
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+	position: relative;
+	background-color: #fff;
+	background-image: none;
+	border: none !important;
+	border-radius: 0 !important;
+	color: #555;
+	padding: 0 !important;
+}
+multiple-autocomplete .form-item-container .list-inline li {
+	background: transparent !important;
+
+}
+multiple-autocomplete .form-item-container .list-inline li span {
+	border: none !important;
+	border-radius: 0 !important;
+	padding: 4px;
+	background: #eee;
+	border-radius: 25px !important;
+	padding: 5px 15px;
+}
+
+/* Toogle */
+
+.input-toogle {
+	position: relative;
+	top: -12px;
+}
+.input-toogle md-switch{
+	display: inline-block !important;
+}
+.input-toogle label{
+	display: inline-block;
+	position: inherit !important;
+	top: -60px;
+	font-size: 14px;
+	padding: 0 5px;
+	margin-right: 10px;
+}
+
+
+/* Checkbox list */
+
+.fieldset-checkbox-list{
+	border: 1px solid #eee;
+	padding: 15px 15px;
+	overflow: hidden;
+}
+.fieldset-checkbox-list .checkbox-item{
+	padding: 10px; 
+	width: 75% !important;
+	max-width: 900px !important;
+	display: -webkit-box !important;
+}
+.fieldset-checkbox-list .checkbox-item .md-label{
+	top: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 49%;
+	display: block;
+}
+.fieldset-checkbox-list .form-item-input{
+	height: 45px !important
+}
+.fieldset-checkbox-list .checkbox-item .md-label span{
+	font-size: 15px;
+	color: #333;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.component-checkbox-class span{
+	font-size: 13px !important;
+}
+.checkboxdemoSelectAll .demo-legend {
+  color: #3F51B5;
+}
+.checkboxdemoSelectAll .demo-fieldset {
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+}
+.checkboxdemoSelectAll .demo-select-all-checkboxes {
+  padding-left: 30px;
+}
+.children-checkbox-1{
+	margin-left: 30px !important;
+}
+.children-checkbox-2{
+	margin-left: 60px !important;
+}
+
+md-checkbox.md-scaffolder-theme:not([disabled]).md-primary.md-checked .md-icon {
+	background-color: #00a348 !important;
+}
+
+/* Componente da arvore */
+.fieldset-checkbox-list-tree .row{ 
+	display: block !important; 
+	border-bottom: solid 1px #eee;
+}
+.fieldset-checkbox-list-tree .row md-checkbox, .fieldset-checkbox-list .row .icon-item-list-tree{
+	display: inline-block !important;
+	vertical-align: middle; 
+	cursor: pointer;
+}
+.fieldset-checkbox-list-tree .row md-checkbox{
+	width: 70% !important;
+}
+.fieldset-checkbox-list .row .icon-item-list-tree.ng-hide{
+	opacity: 0;
+}
+.fieldset-checkbox-list-tree .children-checkbox-1{
+	margin-left: 30px !important;
+}
+.fieldset-checkbox-list-tree .row md-checkbox.children-checkbox-2{
+	margin-left: 90px !important;
+	display: block !important;
+}
+.icon-children-1{
+	position: relative;
+	left: 30px;
+}
+
+.icon-item-list-tree{
+	background: #fff;
+	border-radius: 50%;
+	height: 25px;
+	width: 25px;
+	padding: 1px;
+
+	/* animate */
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.icon-item-list-tree-rotate{
+/*.icon-item-list-tree:hover{*/
+	opacity: 1; 
+	background: #eee;
+	-moz-transform: rotate(-90deg) translate(0px);
+	-webkit-transform: rotate(-90deg) translate(0px);
+	-o-transform: rotate(-90deg) translate(0px);
+	transform: rotate(-90deg) translate(0px);
+	/*z-index: 1000;*/
+}
+.fieldset-checkbox-list-tree .row.ng-hide{
+	display: none !important;
+}
+
+/* Page blankstate */
+
+.page-blankstate.page-layout .top-bg {
+	/*position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 200px;
+	background-size: cover;*/
+	background-image: url(/assets/images/backgrounds/header-blankstate-bg.png) !important;
+}
+.page-blankstate.page-layout .content.ms-scroll.md-scaffolder-theme.ps-container{
+	padding: 0 !important;
+}
+.demo-content{
+	padding: 40px;
+}
+.page-blankstate.page-layout .area-presentation {
+	bottom: solid #ccc 1px;
+}
+.page-blankstate.page-layout .area-presentation .slogan{
+	font-size: 1.2em;
+}
+.btn-new-item{
+	/*background: #7b899e !important;*/
+	background: #43a047;
+	position: absolute !important;
+	top: -12px;
+	right: 0;
+}
+.btn-new-item i{
+	top: 5px;
+	position: relative;
+	font-size: 22px !important;
+}
+.btn-new-item *{
+	color: #fff !important;
+	font-size: .9em;
+}
+/* Filter list */
+.btn-clear-filter{
+	background: #7b899e !important
+}
+.btn-clear-filter *{
+	color: #fff !important;
+}
+.simple-list .filter-form{
+	padding: 20px;
+}
+.simple-list .filter-form{
+	/*margin-top: 20px;*/
+}
+.filter-simple .form-item-input{
+	/*width: 70%;*/
+}
+.item-filter-row{
+	position: relative;
+	display: inline-block;
+	height: 70px;
+	vertical-align: middle;
+}
+.filter-box-search{
+	position: relative;
+	width: 70%;
+}
+.filter-box-options{
+	cursor: pointer;
+	width: 29%;
+}
+.filter-box-options *{
+	color: #999;
+}
+.icon-filter-btn-simple{
+	/*position: relative;*/
+}
+.filter-simple .icon-magnify{
+	position: absolute;
+	right: 60px;
+	z-index: 99;
+	cursor: pointer;
+	right: 5px;
+	top: 4px;
+}
+.md-icon-button{
+	position: absolute !important;
+	right: 50px;
+}
+.title-filter{
+	color: rgba(0,0,0,0.5) !important;
+	max-width: 200px !important;
+	text-transform: uppercase !important;
+	margin-top: -7px !important;
+	font-size: 1em !important;
+	font-weight: bold !important;
+}
+.filter-simple .icon-expand-filter{
+	position: relative;
+	top: -40px;
+	right: -90px;
+	cursor: pointer;
+}
+.icon-chevron-down{
+	position: relative;
+	left: 0;
+	text-decoration: none !important;
+}
+.options-advanced{
+	position: relative;
+	padding: 12px;
+	font-size: 14px;
+	text-align: right;
+	padding-right: 40px;
+/*	font-size: 12px;
+	position: relative;
+	right: 0;
+	text-align: right;
+	text-decoration: underline;
+	top: -28px;
+	color: #666;*/
+}
+.icon-filter-expand{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 43px;
+	height: 43px;
+	padding: 10px;
+}
+.filter-box, .mini-expanded-filter-box{
+	height: 110px;
+}
+.expanded-filter-box, .mini-expanded-filter-box{
+	-webkit-transition: all .6s;
+	transition: all .6s;
+	overflow: hidden;
+}
+.filter-box.expanded-filter-box {
+	/*height: auto;*/
+	/*height: 400px;*/
+}
+
+.icon-filter-expand{
+	/* animate */
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.icon-filter-expand-rotate{
+/*.icon-item-list-tree:hover{*/
+	opacity: 1;
+	-moz-transform: rotate(-180deg) translate(0px);
+	-webkit-transform: rotate(-180deg) translate(0px);
+	-o-transform: rotate(-180deg) translate(0px);
+	transform: rotate(-180deg) translate(0px);
+	/*z-index: 1000;*/
+}
+@keyframes fade-effect {
+	  0% { opacity: 1 }
+	 100% { opacity: 0.7 }
+	/*100% { opacity: 1 }*/
+}
+
+.name-fade {
+	animation-name: fade-effect;
+	animation-duration: .5s;
+}
+#fields-advanced-options{
+	display: none;
+} 
+.advanced-options{
+/*	border-top: solid 1px #eee;
+	padding-top: 30px;*/
+}
+
+/* buttons */
+.md-raised.md-accent.button-delete.button-form.md-button.md-ink-ripple.md-scaffolder-theme{
+	/*background: #A70C00 !important*/
+}
+
+/* dialog */
+md-dialog md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){
+	background: #43a047 !important;
+}
+md-dialog .md-icon-button.close-dialog-button.md-button.md-ink-ripple{
+	position: relative !important;
+	right: 0 !important;
+}
+md-dialog .md-icon-button.close-dialog-button.md-button.md-ink-ripple .icon-close-circle:before{
+	color: rgba(255,255,255,.5) !important
+}
+/* ui selects */
+.cell-select-items{
+	z-index: 9 !important;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+}
+.cell-select-items md-checkbox{
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	top: 0px;
+}
+.cell-select-items md-checkbox .md-container{
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: 20px;
+}
+
+/* 
+ * 
+ * 		UI grid layout correcoes 
+ * 
+ * 		por maria.luisa@codificar.com.br
+ * 
+ */
+
+/* ui-grid */
+.ui-grid-header-cell .cell-select-items md-checkbox .md-container{
+	position: relative;
+	left: 18px;
+	top: 20px;
+}
+.actions-items-selected {
+	display: inline-block;
+	margin-left: 40px;
+}
+.actions-items-selected a{
+	cursor: pointer;
+	color: #fff !important;
+	font-size: .9em;
+	text-decoration: underline;
+}
+.actions-items-selected .md-button{
+	margin: 0;
+	height: 30px !important;
+	min-height: 30px !important;
+	position: relative !important;
+	top: 0px !important;
+	background: rgba(255,255,255,.2) !important;
+}
+.ui-grid-menu .ui-grid-menu-inner .ui-grid-menu-close-button{
+	outline: none;
+	opacity: 0;
+}
+.no-items{
+	text-align: center;
+	padding: 8% 0;
+	span, i{
+		color: #999;
+	}
+	.text-no-items{
+		font-size: 1.2em;
+	}
+}	
+.no-items i{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	margin-bottom: 45px;
+	&,*{ 
+		font-size: 4em !important;
+	}
+}
+
+
+/* 
+ * 
+ * 		Correcoes gerais:: codigo gerado
+ * 
+ * 		por maria.luisa@codificar.com.br
+ * 
+ */
+
+md-input-container cd-enum{
+	/*position: relative !important;*/
+	/*top: 20px !important;*/
+}
+md-autocomplete, md-autocomplete *{
+	box-shadow: none !important;
+	background: transparent !important;
+}
+md-autocomplete md-autocomplete-wrap input{
+	border-bottom: 1px solid rgba(0,0,0,0.12) !important;
+}
+md-datepicker .md-datepicker-input-container{
+	margin-left: 0px !important;
+}
+.input-datepicker md-datepicker{
+	width: 100% !important;
+	padding-right: 0 !important;
+}
+.input-datepicker md-datepicker .md-datepicker-input-container{
+	position: relative;
+	top: -8px;
+}
+md-input-container cd-list{
+	position: relative;
+	top: -20px;
+}
+.breadcrumb span{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	/* word-wrap: break-word; */
+	/*min-width: 100%;*/
+	width: 100%;
+	max-width: 100%;
+	height: 100% !important;
+}
+.ui-grid-viewport{
+	z-index: 0 !important
+}
+.input-interval{
+	position: relative;
+	top: 0px;
+}
+.input-interval .layout-row{
+	position: relative;
+	top: -42px;
+}
+.input-interval label.shrink-label{
+	color: rgba(0,0,0,0.54);
+	font-size: 12px;
+	font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
+	position: relative;
+	top: -20px;
+}
+.form-item-input datepicker-range .datepicker-range{
+	position: relative;
+	top: -84px;
+}
+.label-only *{
+	display: inline-block !important;
+}
+
+/*
+ *
+ * 	CUSTOM THEME SCAFFOLDER MATERIAL 
+ *
+ *	por maria.luisa@codificar.com.br
+ *
+ */
+#vertical-navigation{
+	/*background: #5790ac !important*/
+	/*background: #fefefe !important;*/
+	/*box-shadow: inset 0px 3px 5px -1px rgba(0, 0, 0, 0.2), inset 0px 6px 10px 0px rgba(0, 0, 0, 0.4), inset 0px 1px 18px 0px rgba(0, 0, 0, 0.2) !important;*/
+}
+#vertical-navigation md-toolbar{
+	background: #43a047 !important; 
+}
+
+.ms-navigation .ms-navigation-node .ms-navigation-item > .ms-navigation-button.active {
+	/*color: #fff !important;*/
+}
+
+/*[md-theme="scaffolder"] */
+.md-accent-bg.ms-navigation-button {
+	/*background-color: rgb(67,160,71);*/
+	background-color: transparent !important;
+	color: rgba(255,255,255,1);
+	border-left: 6px solid rgb(67,160,71);
+	padding-left: 50px !important;
+}
+.ms-navigation .ms-navigation-node .ms-navigation-item > .ms-navigation-button, .ms-navigation .ms-navigation-node .ms-navigation-item > .ms-navigation-button .icon {
+	color: #999 !important;
+	/*color: #fff !important;*/
+}
+.ms-navigation .ms-navigation-node:not(.group).has-children:not(.collapsed) {
+	/*background-color: rgba(0, 0, 0, 0.03) !important;*/
+	background-color: rgba(255, 255, 255, 0.03) !important;
+}
+.ms-navigation .ms-navigation-node .ms-navigation-item:hover {
+	/*background: rgba(0, 0, 0, 0.02) !important;*/
+	background-color: rgba(255, 255, 255, 0.02) !important;
+	color: #fff !important;
+}
+.area-title{
+	position: relative;
+}
+.area-title .title{
+	border-left: 4px solid rgb(67,160,71) !important; 
+	padding-left: 20px !important;
+}
+
+.ui-grid-pager-panel *{
+	/*border: none !important;*/
+}
+.header-table{
+	background: rgb(67,160,71);
+	/*background: #f7f7f7;*/
+	/*border-radius: 3px;*/
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 15px 20px !important
+}
+
+/* Ajustes datepicker */
+md-datepicker {
+	padding-top: 16px; 
+	position: relative; 
+	top: 0; 
+	min-height: 70px; 
+	max-height: 70px;
+	position: relative;
+	top: 26px;
+}
+md-datepicker .md-icon-button {
+	right: 10px !important; 
+}
+md-datepicker .md-datepicker-button {
+	position: relative; 
+	right: 0px !important;
+}
+md-datepicker, .md-datepicker-input-container{
+	display: block;
+	width: 100%;
+}
+md-datepicker .md-datepicker-input-container{
+	top: -7px;
+}
+.fields-line{
+	margin-top: 27px;
+}
+.input-datepicker label{
+	font-size: 12px !important;
+	color: #ccc !important;
+	position: relative !important;
+	top: -36px !important;
+	/*correcoes*/
+	/*background: #9f9;*/
+	/*top: 53px;*/
+	/*position: relative;*/
+}
+.input-datepicker {
+	/*correcoes*/
+	position: relative;
+	top: 22px;
+}
+.input-datepicker  md-datepicker{
+	position: relative;
+	top: -48px;
+	background: transparent;
+}
+/* menu grid items lista */
+.ui-grid-menu-items *{
+	outline: none !important;
+}
+.ui-grid-header-cell-wrapper .ui-grid-cell-contents {
+	width: 80% !important;
+}
+md-input-container{
+
+}
+.md-datepicker-calendar-pane.md-whiteframe-z1.md-pane-open{
+	background: #fefefe; 
+}
+
+/* padronizacao do auto complete */
+.md-padding.layout-column.md-scaffolder-theme{
+	padding: 0 !important;
+	padding-bottom: 10px !important;
+}
+.input-auto-complete .multiple-fields.ng-isolate-scope.md-scaffolder-theme *{
+	box-shadow: none !important;
+}
+.multiple-fields.ng-isolate-scope.md-scaffolder-theme{
+	box-shadow: 0 1px rgb(224,224,224);
+}
+.md-chips .md-chip-input-container md-autocomplete input{
+	padding: 0 !important;
+}
+.input-auto-complete.form-item-input{
+	position: relative;
+	top: -9px;
+}
+
+
+/*
+ *	RESPONSIVE DESIGN LAYOUT STYLES
+ *	Responsividade das telas de lista e cadastro (campos em formulario)
+ * 
+ *	por maria.luisa@codificar.com.br
+ * 
+ */
+@media only screen and (max-width:1024px){
+	.fields.layout-collumns-4 .form-item-input{
+		width: 49.5%;
+	}
+	.fields.layout-collumns-3 .form-item-input{
+		width: 49.5%; 
+	}
+	.username.hide-xs{
+		overflow: hidden; 
+		display: none !important;
+	}
+}
+@media only screen and (max-width:1110px){
+	.avatar-wrapper{
+		display: none !important;
+	}
+	.fieldset-upload {
+		padding-bottom: 55px !important;
+	}
+	.button-file-upload, .button-remove-image{
+		margin: 0 auto !important;
+		display: block !important;
+		width: 190px !important
+	}
+}
+@media only screen and (max-width:960px){
+	#toolbar #navigation-toggle {
+		left: 66px;
+	}
+}
+@media only screen and (max-width:700px){ 
+	.fields.layout-collumns-4 .form-item-input, .fields.layout-collumns-3 .form-item-input, .fields.layout-collumns-2 .form-item-input{
+		width: 100%;
+	}
+}
+@media only screen and (max-width:590px){
+	.fieldset-upload {
+		text-align: center;
+	}
+}
+
+

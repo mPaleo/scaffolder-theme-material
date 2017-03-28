@@ -1,0 +1,168 @@
+<div id="sample-list" class="page-layout simple right-sidenav" layout="row">
+
+	<!-- CENTER -->
+	<div class="center" flex ms-scroll>
+
+		<!-- HEADER -->
+		<div class="header md-accent-bg" layout="column" layout-align="space-between">
+			
+			 <div class="breadcrumb col-sm-3" layout="row" layout-align="start right">
+				<md-icon md-font-icon="icon-home" class="s16"></md-icon>
+				<md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+				<span class="parent">{{ 'sample.singular' | translate }}</span>
+				<md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+				<span class="parent">{{ 'nav.list' | translate }}</span>
+			</div>
+
+			<div layout="row">
+
+				<div flex="auto">
+					<span class="md-display-1">{{ 'list.content.subtitle' | translate }}{{ 'sample.plural' | translate }}</span>
+				</div>
+
+				<md-button flex="none" class="md-icon-button sidenav-toggle" ng-click="vm.toggleSidenav('sidenav')"
+						   translate-attr-aria-label="list.toggle_sidenav">
+					<md-icon md-font-icon="icon-menu" class="icon"></md-icon>
+				</md-button>
+				
+			</div>
+
+
+		</div>
+		<!-- / HEADER -->
+
+		<!-- list.content -->
+		<div class="content">
+	
+
+			<div class="form-wrapper md-whiteframe-1dp filter-box">
+				<form name="filtersParams" class="md-inline-form" novalidate>
+
+
+					<div class="form-title">{{ 'list.content.subtitle' | translate }}{{ 'sample.plural' | translate }}</div>
+					<p>{{ 'list.content.about_filters' | translate }}</p>
+					<div class="fields">
+
+						<md-input-container class="md-block">
+							<input cd-number name="id" ng-model="vm.searchParams.filters.company.id" placeholder="{{ 'sample.columns.id' | translate }}">
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input type="text" name="fantasy_name" ng-model="vm.searchParams.filters.company.fantasy_name" placeholder="{{ 'sample.columns.fantasy_name' | translate }}">
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input type="text" name="social_reason" ng-model="vm.searchParams.filters.company.social_reason" placeholder="{{ 'sample.columns.social_reason' | translate }}">
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input cd-number maxlength="7" name="cnpj" ng-model="vm.searchParams.filters.company.cnes" placeholder="{{ 'sample.columns.cnes' | translate }}">
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input cd-cnpj name="cnpj" ng-model="vm.searchParams.filters.company.cnpj" placeholder="{{ 'sample.columns.cnpj' | translate }}">                      
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input cd-phone type="text" name="phone" ng-model="vm.searchParams.filters.company.phone" placeholder="{{ 'sample.columns.phone' | translate }}"> 
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input cd-number  name="address_id" ng-model="vm.searchParams.filters.company.address_id" placeholder="{{ 'sample.columns.address_id' | translate }}">
+						</md-input-container>
+						<datepicker-range datapicker-range-name="{{ 'sample.columns.created_at' | translate }}" ng-model="vm.searchParams.filters.company.created_at"></datepicker-range>
+						<datepicker-range datapicker-range-name="{{ 'sample.columns.updated_at' | translate }}" ng-model="vm.searchParams.filters.company.updated_at"></datepicker-range>
+						
+						<md-input-container class="md-block">
+							<input cd-number  name="address_id2" ng-model="vm.searchParams.filters.address.id" placeholder="{{ 'sample.columns.address.id' | translate }}">
+						</md-input-container>
+						<md-input-container class="md-block">
+							<input name="address_zip_code" ng-model="vm.searchParams.filters.address.zip_code" placeholder="{{ 'sample.columns.address.zip_code' | translate }}">
+						</md-input-container>
+
+						<md-input-container class="md-block input">
+							<md-autocomplete cd-autocomplete
+								ng-disabled="dir.isDisabled"
+								md-no-cache="dir.noCache"
+								md-selected-item="dir.selectedItem"
+								md-search-text-change="dir.searchTextChange(dir.searchText)"
+								md-search-text="dir.searchText"
+								md-selected-item-change="dir.selectedItemChange(item); vm.searchParams.filters.adress.city_id = item.id" 
+								md-items="item in dir.querySearch(dir.searchText)"
+								md-item-text="item.text" 
+								md-min-length="0"
+								url="app/data/company/MG.json"
+								placeholder="{{ 'sample.columns.address.city_state' | translate }}"
+								ng-init="vm.searchParams.filters.address.city_id = item.id">
+							<md-item-template>
+								<span md-highlight-text="dir.searchText" md-highlight-flags="^i"> {{ item.name }}, {{ item.state_name }}</span>
+							</md-item-template>
+							
+						  </md-autocomplete>
+						</md-input-container>
+
+						<md-input-container class="md-block">
+						   <input type="text" name="address_street" ng-model="vm.searchParams.filters.address.street" placeholder="{{ 'sample.columns.address.street' | translate }}"> 
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input cd-number maxlength='8' minlength='1' type="text" name="address_number" ng-model="vm.searchParams.filters.address.number" placeholder="{{ 'sample.columns.address.number' | translate }}"> 
+						</md-input-container>
+
+						<md-input-container class="md-block">
+							<input type="text" name="address_complement" ng-model="vm.searchParams.filters.address.complement" placeholder="{{ 'sample.columns.address.complement' | translate }}"> 
+						</md-input-container>
+
+						<md-input-container class="md-block">
+						   <input type="text" name="address_district" ng-model="vm.searchParams.filters.address.district" placeholder="{{ 'sample.columns.address.district' | translate }}"> 
+						</md-input-container>
+
+						<datepicker-range datapicker-range-name="{{ 'sample.columns.address.created_at' | translate }}" ng-model="vm.searchParams.filters.address.created_at"></datepicker-range>
+						<datepicker-range datapicker-range-name="{{ 'sample.columns.address.updated_at' | translate }}" ng-model="vm.searchParams.filters.address.updated_at"></datepicker-range>
+
+					</div>
+					<div class="actions-box">						
+						<md-button class="md-raised md-button md-default-theme md-align-left button-form" translate-attr-aria-label="common_words.clean" ng-show="vm.isFiltered" ng-click="vm.removeFilter()">
+							<i class="icon icon-eraser icon-button-form"></i>
+							{{ 'common_words.clean' | translate }}
+						</md-button>
+						 <md-button class="md-raised md-accent md-align-right button-form" aria-label="{{ 'common_words.filter' | translate }}"  ng-click="vm.getFilter()">
+						 	<i class="icon icon-filter icon-button-form"></i>
+							<span ng-hide="vm.isFiltered">{{ 'common_words.filter' | translate }}</span>
+							<span ng-show="vm.isFiltered">{{ 'common_words.update' | translate }}</span>
+						</md-button>
+					</div>
+				</form>
+			</div>
+
+			<pre>
+				{{vm.searchParams}}
+			</pre>
+
+			<div id="company_grid" ui-grid="vm.gridUiOpts" class="data-grid" ui-grid-pagination resize-ui-grid ui-grid-auto-resize ui-grid-exporter></div>
+
+		</div>
+		<!-- / list.content -->
+
+	</div>
+	<!-- / CENTER -->
+
+	<!-- SidENAV -->
+	<md-sidenav class="sidenav md-sidenav-right" md-is-open="false" md-component-id="sidenav" 
+				ms-scroll ms-sidenav-helper>
+
+		<div class="advanced-options">
+			<md-list>
+				<md-subheader class="md-no-sticky">{{ 'advanced_options.title' | translate }}</md-subheader>
+				<md-list-item ng-click="vm.exportItem('csv')"><p><span class="icon icon-file-excel"></span> {{ 'advanced_options.excel' | translate }}</p></md-list-item>
+				<md-divider></md-divider>
+				<md-list-item ng-click="vm.exportItem('pdf')"><p><span class="icon icon-file-pdf"></span> {{ 'advanced_options.pdf' | translate }}</p></md-list-item>
+				<md-divider></md-divider>
+				<md-list-item ng-click="vm.toggleColumns(ev)"><p><span class="icon icon-table-column-remove"></span> {{ 'advanced_options.choose_columns.title' | translate }}</p></md-list-item>
+			</md-list>
+		</div>
+
+	</md-sidenav>
+	<!-- / SidENAV -->
+
+</div>

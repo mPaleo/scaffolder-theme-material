@@ -1,0 +1,126 @@
+{
+	"nav": {
+		"list": "List",
+		"register": "Register"
+	},
+	"common_words": {
+		"cancel": "Cancel",
+		"clean": "Clean", 
+		"confirm": "Confirm",
+		"delete": "Delete",
+		"edit": "Edit",
+		"file_upload": "Select file",
+		"file_uploads": "Select files",
+		"image_upload": "Select image",
+		"image_uploads": "Select images",
+		"filter": "Filter",
+		"no": "No",
+		"no_image": "No image",
+		"no_file": "No file",
+		"ok": "OK",
+		"remove": "Remove",
+		"save": "Save",
+		"show_details": "Show Details",
+		"update": "Update",
+		"yes": "Yes",
+		"image_upload_description": "Load image",
+		"image_uploads_description": "Load images",
+		"file_upload_description": "Load file",
+		"file_uploads_description": "Load files",
+		"remove_items": "Remove items" 
+	},
+	"advanced_options": {
+		"title": "Advanced Options",
+		"print": "Print",
+		"excel": "Export to Excel",
+		"pdf": "Export to PDF",
+		"choose_columns": {
+			"title": "Choose Columns",
+			"explain": "Toggle the itens below do change columns visibility."
+		}
+	},
+	"list": {
+		"actions": "Actions",
+		"toggle_sidenav": "Toggle Sidenav",
+		"toasts": {
+			"remove_item": {
+				"success": "{{entity}} removed successfully.",
+				"error": "Could not remove {{entity}}."
+			}
+		},
+		"dialogs": {
+			"remove_item": {
+				"title": "Remove {{entity}}?",
+				"content": "You are about to remove this {{entity}}. Are you sure?"
+			},
+			"show_item": {
+				"title": "Item information"
+			}
+		},
+		"content": {
+			"title": "Search {{entity}}",
+			"subtitle": "Filter {{entity}}",
+			"about_filters": "Use the fields below to filter {{entity}}."
+		},
+		"filter": {
+			"simple": "Pesquisa simples",
+			"advanced": "Pesquisa Avançada",
+			"advanced_options": {
+				"hide": "Esconder opções avançadas",
+				"show": "Ver opções avançadas"
+			}
+		},
+		"new_item": "Adicionar Novo",
+		"no_items": "No items found.",
+		"message_new_item": "To register new items click",
+		"link_new_item": " here"
+	},
+	"register": {
+		"dialogs": {
+			"add_item": {
+				"success": {
+					"title": "New {{entity}} saved",
+					"content": "{{entity}} successfuly saved."					
+				},
+				"error": {
+					"title": "Error!",
+					"content": "An error ocurred saving the {{entity}}.",					
+					"content_with_log": "An error ocurred saving the {{entity}}. Error:."					
+				}
+			},
+			"edit_item": {
+				"success": {
+					"title": "{{entity}} edited",
+					"content": "{{entity}} successfuly updated."					
+				},
+				"error": {
+					"title": "Error!",
+					"content": "An error ocurred editing the {{entity}}."					
+				}
+			},
+			"remove_item": {
+				"title": "Remove {{entity}}?",
+				"content": "You are about to remove this {{entity}}. Are you sure?"
+			}
+		},
+		"content": {
+			"title": "Register {{entity}}",
+			"introduction": "Fill the fields below to create a new {{entity}}."
+		},
+		"fields": {
+			"upload_image": {
+				"simple": "Select an image to upload. The supported image formats are .JPG and .PNG and the maximum size should be 1MB.",
+				"multiple": "Selcione várias imagens para fazer upload."
+			} 
+		}
+	},
+	"dashboard_title":"Home",
+	"admin": "Administrator",
+	"login": {
+		"error":{
+			"title": "Error!",
+			"content": "Email address or password invalid"
+		}
+	}
+
+}

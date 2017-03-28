@@ -1,0 +1,40 @@
+#layout-content-with-toolbar {
+
+    #toolbar {
+        padding: 0 0 0 16px;
+        
+        .logo {
+
+            .logo-image { 
+                display: block;
+                background: material-color('green', '600');  
+                width: 32px;
+                min-width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 500;
+                border-radius: 50%;
+            }
+
+            .logo-text {
+                color: rgba(0, 0, 0, 0.87);
+                margin-left: 16px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+@media only screen and (max-width: $layout-breakpoint-sm) {
+
+    #layout-content-with-toolbar {
+
+        #toolbar {
+            padding: 0;
+        }
+    }
+}

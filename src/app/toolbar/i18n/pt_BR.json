@@ -1,0 +1,21 @@
+{
+    "TOOLBAR": {
+        "TOGGLE_NAVIGATION": "Toggle navigation",
+        "TOGGLE_NAVIGATION_MODE": "Toggle navigation mode",
+        "SEARCH": "Pesquisar",
+        "USER_SETTINGS": "Configurações de usuário",
+        "TOGGLE_QUICK_PANEL": "Toggle quick panel",
+        "ENGLISH": "Inglês",
+        "SPANISH": "Espanhol",
+        "TURKISH": "Turco",
+        "PORTUGUESE": "Português",
+        "PROFILE": "Meu perfil",
+        "INBOX": "Caixa de entrada",
+        "ONLINE": "Online",
+        "AWAY": "Ausente",
+        "DISTURB": "Não pertube",
+        "INVISIBLE": "Invisível",
+        "OFFLINE": "Offline",
+        "LOGOUT": "Desconectar"
+    }
+}

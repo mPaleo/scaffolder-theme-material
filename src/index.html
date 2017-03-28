@@ -1,0 +1,426 @@
+<!doctype html>
+<html ng-app="scaffolder">
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>scaffolder - Admin Theme</title> 
+
+        <!-- Place favicon.jpg and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css({.tmp/serve,src}) styles/app.css -->
+        <!-- inject:css -->
+        <!-- css files will be automatically insert here -->
+        <!-- endinject -->
+        <!-- endbuild -->
+
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic'
+              rel='stylesheet' type='text/css'>
+        <!-- <link rel="stylesheet" href="app/custom.css">  -->
+
+    </head>
+
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <body md-theme="{{vm.themes.active.name}}" md-theme-watch ng-controller="IndexController as vm"
+          class="{{state.current.bodyClass || ''}}">
+ 
+        <!-- SPLASH SCREEN -->
+        <div ms-splash-screen>
+            <style type="text/css">
+                #splash-screen {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #49a250;
+                    background-image: url('assets/images/backgrounds/scaffolder-3.png'); 
+                    background-position: center;
+                    /*background-size: 600px 100px; */
+                    /*background-repeat: no-repeat;*/
+                    z-index: 99999;
+                }
+
+                #splash-screen.ng-leave {
+                    opacity: 1 ;
+                    transition: all linear 200ms ;
+                    -webkit-transition: all linear 200ms ;
+                }
+
+                #splash-screen.ng-leave-active {
+                    opacity: 0 ;
+                }
+
+                #splash-screen .center {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                #splash-screen .scaffolder-logo {
+                    margin: 0 auto;
+                    max-width: 200px; 
+                    display: block; 
+                }
+
+                #splash-screen .logo {
+                    width: 96px;
+                    height: 96px;
+                    line-height: 96px;
+                    margin: 0 auto 48px auto;
+                    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                    font-size: 56px;
+                    text-align: center;
+                    border-radius: 2px;
+                    background-color: #039BE5;
+                    color: #FFFFFF;
+                    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.22);
+                }
+
+                #splash-screen .spinner-wrapper {
+                    position: relative;
+                    margin: 0 auto;
+                    text-align: center;
+                    margin-top: 50px; 
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -ms-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                }
+
+                #splash-screen .spinner-wrapper .outer-spinner {
+                    display: inline-block;
+                    width: 48px;
+                    height: 48px;
+                    -webkit-animation: rotate 2.25s linear infinite;
+                    animation: rotate 2.25s linear infinite;
+                }
+
+                #splash-screen .spinner-wrapper .outer-spinner .spinner {
+                    display: inline-block;
+                    position: relative;
+                    width: 48px;
+                    height: 48px;
+                    -webkit-animation: sporadic-rotate 5s ease infinite;
+                    animation: sporadic-rotate 5s ease infinite;
+                }
+
+                #splash-screen .spinner-wrapper .outer-spinner .spinner .left {
+                    position: absolute;
+                    overflow: hidden;
+                    top: 0;
+                    left: 0;
+                    width: 24px;
+                    height: 48px;
+                }
+
+                #splash-screen .spinner-wrapper .outer-spinner .spinner .left .circle {
+                    width: 48px;
+                    height: 48px;
+                    border: 4px solid #fdfdfd;
+                    border-right-color: transparent;
+                    border-bottom-color: transparent;
+                    border-radius: 50%;
+                    -webkit-animation: animate-left-circle 1.25s ease infinite, left-circle-colors 5s linear infinite;
+                    animation: animate-left-circle 1.25s ease infinite, left-circle-colors 5s linear infinite;
+                }
+
+                #splash-screen .spinner-wrapper .outer-spinner .spinner .right {
+                    position: absolute;
+                    overflow: hidden;
+                    top: 0;
+                    left: 50%;
+                    width: 24px;
+                    height: 48px;
+                }
+
+                #splash-screen .spinner-wrapper .outer-spinner .spinner .right .circle {
+                    position: relative;
+                    right: 100%;
+                    width: 48px;
+                    height: 48px;
+                    border: 4px solid #fdfdfd;
+                    border-left-color: transparent;
+                    border-bottom-color: transparent;
+                    border-radius: 50%;
+                    -webkit-animation: animate-right-circle 1.25s ease infinite, right-circle-colors 5s linear infinite;
+                    animation: animate-right-circle 1.25s ease infinite, right-circle-colors 5s linear infinite;
+                }
+
+                @-webkit-keyframes rotate {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes rotate {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes sporadic-rotate {
+                    12.5% {
+                        -webkit-transform: rotate(135deg);
+                        -ms-transform: rotate(135deg);
+                        transform: rotate(135deg);
+                    }
+                    25% {
+                        -webkit-transform: rotate(270deg);
+                        -ms-transform: rotate(270deg);
+                        transform: rotate(270deg);
+                    }
+                    37.5% {
+                        -webkit-transform: rotate(405deg);
+                        -ms-transform: rotate(405deg);
+                        transform: rotate(405deg);
+                    }
+                    50% {
+                        -webkit-transform: rotate(540deg);
+                        -ms-transform: rotate(540deg);
+                        transform: rotate(540deg);
+                    }
+                    62.5% {
+                        -webkit-transform: rotate(675deg);
+                        -ms-transform: rotate(675deg);
+                        transform: rotate(675deg);
+                    }
+                    75% {
+                        -webkit-transform: rotate(810deg);
+                        -ms-transform: rotate(810deg);
+                        transform: rotate(810deg);
+                    }
+                    87.5% {
+                        -webkit-transform: rotate(945deg);
+                        -ms-transform: rotate(945deg);
+                        transform: rotate(945deg);
+                    }
+                    100% {
+                        -webkit-transform: rotate(1080deg);
+                        -ms-transform: rotate(1080deg);
+                        transform: rotate(1080deg);
+                    }
+                }
+
+                @-webkit-keyframes animate-left-circle {
+                    0%, 100% {
+                        -webkit-transform: rotate(130deg);
+                        -ms-transform: rotate(130deg);
+                        transform: rotate(130deg);
+                    }
+                    50% {
+                        -webkit-transform: rotate(-5deg);
+                        -ms-transform: rotate(-5deg);
+                        transform: rotate(-5deg);
+                    }
+                }
+
+                @keyframes animate-left-circle {
+                    0%, 100% {
+                        -webkit-transform: rotate(130deg);
+                        -ms-transform: rotate(130deg);
+                        transform: rotate(130deg);
+                    }
+                    50% {
+                        -webkit-transform: rotate(-5deg);
+                        -ms-transform: rotate(-5deg);
+                        transform: rotate(-5deg);
+                    }
+                }
+
+                @-webkit-keyframes animate-right-circle {
+                    0%, 100% {
+                        -webkit-transform: rotate(-130deg);
+                        -ms-transform: rotate(-130deg);
+                        transform: rotate(-130deg);
+                    }
+                    50% {
+                        -webkit-transform: rotate(5deg);
+                        -ms-transform: rotate(5deg);
+                        transform: rotate(5deg);
+                    }
+                }
+
+                @keyframes animate-right-circle {
+                    0%, 100% {
+                        -webkit-transform: rotate(-130deg);
+                        -ms-transform: rotate(-130deg);
+                        transform: rotate(-130deg);
+                    }
+                    50% {
+                        -webkit-transform: rotate(5deg);
+                        -ms-transform: rotate(5deg);
+                        transform: rotate(5deg);
+                    }
+                }
+
+                @-webkit-keyframes left-circle-colors {
+                    0%, 100% {
+                        border-color: #fdfdfd;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    25% {
+                        border-color: #9eb1b0;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    50% {
+                        border-color: #1b83a5;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    75% {
+                        border-color: #a9dced;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                }
+
+                @keyframes left-circle-colors {
+                    0%, 100% {
+                        border-color: #fdfdfd;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    25% {
+                        border-color: #9eb1b0;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    50% {
+                        border-color: #1b83a5;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    75% {
+                        border-color: #a9dced;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                }
+
+                @-webkit-keyframes right-circle-colors {
+                    0%, 100% {
+                        border-color: #fdfdfd;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    25% {
+                        border-color: #9eb1b0;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    50% {
+                        border-color: #1b83a5;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    75% {
+                        border-color: #a9dced;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                }
+
+                @keyframes right-circle-colors {
+                    0%, 100% {
+                        border-color: #fdfdfd;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    25% {
+                        border-color: #9eb1b0;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    50% {
+                        border-color: #1b83a5;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                    75% {
+                        border-color: #a9dced;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent; 
+                    } 
+                }
+            </style>
+
+            <div id="splash-screen">
+                <div class="center">
+                    <div class="scaffolder-logo">
+                        <img src="assets/images/logos/scaffolder.png" alt="">
+                    </div>
+                    <!-- Material Design Spinner -->
+                    <div class="spinner-wrapper">
+                        <div class="outer-spinner">
+                            <div class="spinner">
+                                <div class="left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Material Design Spinner -->
+                </div>
+            </div>
+        </div>
+        <!-- / SPLASH SCREEN -->
+
+        <div id="main" class="animate-slide-up" ui-view="main" layout="column"></div>
+
+        <ms-theme-options></ms-theme-options>
+
+        <!-- build:js(src) scripts/vendor.js -->
+        <!-- bower:js -->
+        <!-- run `gulp inject` to automatically populate bower script dependencies -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp/serve,.tmp/partials,src,../../resources/angularjs}) scripts/app.js -->
+        <!-- inject:js -->
+        <!-- js files will be automatically insert here -->
+        <!-- endinject -->
+
+        <!-- inject:partials -->
+        <!-- angular templates will be automatically converted in js and inserted here -->
+        <!-- endinject -->
+        <!-- endbuild -->
+
+        <!-- Componentes externos --> 
+        <script type="text/javascript" src="https://rawgit.com/jagdeep-singh/angularMultipleSelect/master/build/multiple-select.min.js"></script>
+        <link href="https://rawgit.com/jagdeep-singh/angularMultipleSelect/master/build/multiple-select.min.css" rel="stylesheet">
+
+    </body>
+</html>

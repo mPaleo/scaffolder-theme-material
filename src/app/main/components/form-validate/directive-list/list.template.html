@@ -1,0 +1,5 @@
+<md-select ng-model="selectedItem" md-on-close="setModel()">
+	<md-option ng-value="item.id" ng-repeat="item in list">
+		<h3> {{ item.name }} </h3>
+	</md-option>
+</md-select>

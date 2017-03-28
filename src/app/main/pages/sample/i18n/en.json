@@ -1,0 +1,31 @@
+{
+	"sample": {
+		"singular": "Sample",
+		"plural": "Samples",
+		"columns": {
+			"id": "ID",
+			"fantasy_name": "Fantasy Name",
+			"social_reason": "Social Reason",
+			"cnes": "CNES",
+			"cnpj": "CNPJ",
+			"phone": "Phone",
+			"address_id": "Address ID",
+			"created_at": "Created at",
+			"updated_at": "Updated at",
+			"until": "until",
+			"address": {
+				"id": "Address ID (2)",
+				"street": "Street",
+				"zip_code": "Zip Code",
+				"number": "Number",
+				"complement": "Complement",
+				"district": "District",
+				"city": "City",
+				"city_id": "City ID",
+				"city_state": "City, State",
+				"created_at": "Address Created at",
+				"updated_at": "Address Updated at"	
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"ERROR_MESSAGE": {
+		"REQUIRED": "Campo obrigatório",
+		"MAIL_INVALID": "E-mail inválido",
+		"NUMBER_INVALID": "Número inválido",
+		"PHONE_INVALID": "Telefone inválido",
+		"CNPJ_INVALID": "CNPJ inválido",
+		"CEP_INVALID": "CEP inválido",
+		"CONFIRM": "s não correspondem",
+		"MINLENGTH": "O campo deve conter no mínimo",
+		"DIGITS": "dígitos",
+		"PASSWORD_INVALID": "A senha deve conter no mínimo 6 caracteres",
+		"UNIQUE_VALUE": "Valor já cadastrado no sistema"
+	},
+	"SEARCH_MESSAGE": "Pesquisar"
+} 
