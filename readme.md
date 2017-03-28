@@ -22,6 +22,16 @@ This is a package for [codificar/scaffolder](https://github.com/codificar/scaffo
 4. Fork [codificar/scaffolder](https://github.com/codificar/scaffolder)
 5. Wire up things
 6. Enjoy -->
+### Basic interfaces
+
+Blankstate 
+
+![Material Template presentation](https://cloud.githubusercontent.com/assets/4041128/24418077/210d3cfa-13c1-11e7-8179-a4806e77768a.png)
+
+Register 
 
 ![Material Template register](https://cloud.githubusercontent.com/assets/4041128/24417834/51d3f8e8-13c0-11e7-98bf-209ba2a39b22.png)
+
+List 
+
 ![Material Template list](https://cloud.githubusercontent.com/assets/4041128/24417850/61dd2cdc-13c0-11e7-9394-6c0d26a6c659.png)
