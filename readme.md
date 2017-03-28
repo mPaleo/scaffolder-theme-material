@@ -5,6 +5,10 @@
 
 This is a package for [codificar/scaffolder](https://github.com/codificar/scaffolder)
 
+### Documentation
+
+See [documentation](https://docs.google.com/document/d/1O6_Lhz3DuO1bsWKiDrQLrSa8bKrQ6HQ0KYcnaVBHamQ/edit) to more information about this project.
+
 ### Publish
 ```bash
 ./artisan vendor:publish --provider="ScaffolderTheme\ScaffolderThemeServiceProvider" --force
