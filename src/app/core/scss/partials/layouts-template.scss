@@ -69,7 +69,7 @@ body {
 
     #content-container {
         position: relative;
-        overflow: hidden;
+        //overflow: hidden;
 
         #content {
             position: absolute;
@@ -98,4 +98,10 @@ body {
             left: 0;
         }
     }
+}
+.margin-right-menu{
+    margin-right:1250px !important;
+}
+.margin-right-menu-mais{
+    margin-right: 1490px !important;
 }

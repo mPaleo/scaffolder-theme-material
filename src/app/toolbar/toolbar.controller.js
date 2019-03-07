@@ -10,7 +10,7 @@
     function ToolbarController($rootScope, $mdSidenav, $translate, $mdToast)
     {
         var vm = this;
-
+        var teste = 0;
         // Data
         vm.bodyEl = angular.element('body');
         $rootScope.global = {
@@ -77,7 +77,30 @@
          */
         function toggleSidenav(sidenavId)
         {
-            $mdSidenav(sidenavId).toggle();
+           
+            var resto = teste/2;
+            var button = document.getElementById('navigation-toggle');
+            var div= document.getElementById('vertical-navigation');
+
+            if(resto == 0){
+                 button.classList.add("margin-right-menu-mais");
+                 button.classList.remove("margin-right-menu");
+                
+                div.classList.remove("md-locked-open");
+                div.classList.add('md-closed');
+                teste = 1;
+            }else{
+                div.classList.add("md-locked-open","md-closed");               
+                div.classList.remove('md-closed');
+                 button.classList.remove("margin-right-menu-mais");
+                 button.classList.add("margin-right-menu");
+              
+                teste = 0;
+            }
+    
+            //$mdSidenav(sidenavId).toggle();
+            
+           
         }
 
         /**
