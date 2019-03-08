@@ -16,4 +16,7 @@
 
         //////////
     }
+    var remove_div = document.getElementById('vertical-navigation');
+        remove_div.classList.add('md-locked-open');
+        remove_div.classList.remove('md-closed');
 })();
