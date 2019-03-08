@@ -1,7 +1,7 @@
 {
 	"nav": {
 		"list": "Listar",
-		"register": "Registrar"
+		"register": "Criar"
 	},
 	"common_words": { 
 		"cancel": "Cancelar",
@@ -103,7 +103,7 @@
 			}
 		},
 		"content": {
-			"title": "Registrar {{entity}}",
+			"title": "Criar {{entity}}",
 			"introduction": "Preencha os campos abaixo para criar um(a) novo(a) {{entity}}."
 		},
 		"fields": {

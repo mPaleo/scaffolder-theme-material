@@ -1,7 +1,7 @@
 {
 	"nav": {
 		"list": "List",
-		"register": "Register"
+		"register": "Create"
 	},
 	"common_words": {
 		"cancel": "Cancel",
